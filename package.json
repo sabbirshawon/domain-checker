@@ -13,6 +13,7 @@
     "url": "https://github.com/sabbirshawon/domain-checker/"
   },
   "author": "Sabbir Ahmed",
+  "homepage" : "https://sabbirshawon.github.io/domain-checker/",
   "license": "ISC",
   "devDependencies": {
     "enzyme": "^3.8.0",
