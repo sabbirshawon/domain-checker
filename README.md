@@ -1,4 +1,4 @@
-# Domain Search
+# Domain Checker
 
 # installation process:
 
