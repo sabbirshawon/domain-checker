@@ -1,0 +1,45 @@
+{
+  "name": "domain-checker",
+  "version": "4.0.1",
+  "description": "Domain checker",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "npm run build:react && npm run build:bundle",
+    "build:react": "react-scripts build",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "author": "Sabbir Ahmed",
+  "license": "ISC",
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "fetch-jsonp": "^1.1.3",
+    "gh-pages": "^2.0.1",
+    "prop-types": "^15.6.1",
+    "query-string": "^6.2.0",
+    "react": "^16.7.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-app-polyfill": "^0.2.2",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.8",
+    "react-test-renderer": "^16.7.0",
+    "sinon": "^7.2.3",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "url-polyfill": "^1.1.3",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
