@@ -11,7 +11,7 @@ const elements = document.getElementsByClassName('rstore-domain-search');
 Array.prototype.forEach.call(elements, element => {
 
   const text = {
-    placeholder: element.dataset.text_placeholder || 'Find your perfect domain name',
+    placeholder: element.dataset.text_placeholder || 'Enter your domain name',
     search: element.dataset.text_search || 'Search',
     available: element.dataset.text_available || 'Congrats, {domain_name} is available!',
     notAvailable: element.dataset.text_not_available || 'Sorry, {domain_name} is already taken.',
