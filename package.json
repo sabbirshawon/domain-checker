@@ -6,7 +6,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "npm run build:react && npm run build:bundle",
-    "build:react": "react-scripts build"
+    "build:react": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
