@@ -20,7 +20,6 @@ export default class DomainSearch extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleDomainSearch = this.handleDomainSearch.bind(this);
-    this.handleContinueClick = this.handleContinueClick.bind(this);
 
     this.state = initialState;
   };
@@ -98,12 +97,6 @@ export default class DomainSearch extends Component {
     this.setState({ selectedDomains: newSelectDomains });
   }
 
-  handleContinueClick() {
-    this.setState({ submitting: true })
-  }
-
- 
-
   render() {
     const {
       baseUrl,
@@ -122,10 +115,7 @@ export default class DomainSearch extends Component {
     const domainCount = selectedDomains.length;
     const hasExactMatch = results && results.exactMatchDomain && results.exactMatchDomain.available;
 
-    // Prevent navigation when domains are selected and user attempts to navigate
-    // outside of the domain purchase path
     window.onbeforeunload = () => {
-      // Most browsers control the return message to the user, we can safely return an empty string here.
       return !submitting && (hasExactMatch || domainCount > 0) ? '' : undefined;
     };
 

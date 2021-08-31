@@ -9,8 +9,7 @@ import queryString from 'query-string';
 const elements = document.getElementsByClassName('rstore-domain-search');
 
 Array.prototype.forEach.call(elements, element => {
-  //variable naming is based on WordPress coding standards
-  // https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/#naming-conventions
+
   const text = {
     placeholder: element.dataset.text_placeholder || 'Find your perfect domain name',
     search: element.dataset.text_search || 'Search',
