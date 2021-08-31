@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Domain from './Domain';
 import ExactDomain from './ExactDomain';
 
-const SearchResults = ({ results, cartClick, plid, text, baseUrl }) => {
+const SearchResults = ({ results, plid, text, baseUrl }) => {
   const {
     exactMatchDomain,
     suggestedDomains,
@@ -28,7 +28,6 @@ const SearchResults = ({ results, cartClick, plid, text, baseUrl }) => {
 
 SearchResults.propTypes = {
   results: PropTypes.object.isRequired,
-  cartClick: PropTypes.func.isRequired,
   text: PropTypes.object.isRequired
 }
 

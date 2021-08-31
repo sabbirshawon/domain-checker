@@ -226,13 +226,20 @@ hr {
   border: 3px solid green;
 }
 
+.rstore-domain-search p.available{
+  color: green;
+}
+
+.rstore-domain-search p.not-available{
+  color: red;
+}
+
 .rstore-domain-search p.available,
 .rstore-domain-search p.not-available {
   font-weight: bold;
   font-size: 1.2em;
   margin: 5% 0 5%;
   text-align: center;
-  color: green;
 }
 
 .rstore-domain-search .domain-name {

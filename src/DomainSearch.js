@@ -102,34 +102,7 @@ export default class DomainSearch extends Component {
     this.setState({ submitting: true })
   }
 
-  generateCartItems() {
-    const {
-      selectedDomains,
-      results
-    } = this.state;
-
-    const items = [];
-
-    if (results) {
-      let domains;
-
-      if (selectedDomains.length === 0 && results.exactMatchDomain.available) {
-        domains = [results.exactMatchDomain];
-      }
-      else {
-        domains = selectedDomains;
-      }
-
-      domains.forEach(item => {
-        items.push({
-          id: 'domain',
-          domain: item.domain
-        });
-      });
-    }
-
-    return JSON.stringify(items);
-  }
+ 
 
   render() {
     const {
@@ -148,7 +121,6 @@ export default class DomainSearch extends Component {
 
     const domainCount = selectedDomains.length;
     const hasExactMatch = results && results.exactMatchDomain && results.exactMatchDomain.available;
-    const cartUrl = `https://www.${baseUrl}/api/v1/cart/${plid}/?redirect=true`;
 
     // Prevent navigation when domains are selected and user attempts to navigate
     // outside of the domain purchase path
@@ -179,7 +151,7 @@ export default class DomainSearch extends Component {
 
         { error && <div className="rstore-error">Error: { error }</div> }
         { (searching || submitting) && <div className="rstore-loading"></div> }
-        { results && <SearchResults results={ results } cartClick={ domain => this.handleSelectClick(domain) } text={ text }/> }
+        { results && <SearchResults results={ results } text={ text }/> }
       </Fragment>
     );
   }
